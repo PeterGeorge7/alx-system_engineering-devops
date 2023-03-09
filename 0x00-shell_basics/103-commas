@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1
+ls -Ap1 | sort -d --version-sort | sed -e 's/\(.*\)\/$/\1\//' | tr '\n' ',' && echo
